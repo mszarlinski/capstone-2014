@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>symptoms-android</artifactId>
+	<packaging>pom</packaging>
+	<name>symptoms-android</name>
+	<description>SYMPTOMS Application Android Parent Project</description>
+
+	<modules>
+<!-- 		<module>patient-client</module> -->
+		<module>doctor-client</module>
+	</modules>
+	
+	<parent>
+		<groupId>pl.coursera.mszarlinski.symptoms</groupId>
+		<artifactId>symptoms-parent</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+	<properties>
+		<android-platform>19</android-platform>
+		<android-maven-plugin-version>3.9.0-rc.1</android-maven-plugin-version>
+		<maven-eclipse-plugin-version>2.9</maven-eclipse-plugin-version>
+		<com.google.android-version>4.1.1.4</com.google.android-version>
+		<org.springframework.android-version>2.0.0.M1</org.springframework.android-version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.google.android</groupId>
+			<artifactId>android</artifactId>
+			<version>${com.google.android-version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.android</groupId>
+			<artifactId>spring-android-rest-template</artifactId>
+			<version>${org.springframework.android-version}</version>
+		</dependency>
+	</dependencies>
+</project>

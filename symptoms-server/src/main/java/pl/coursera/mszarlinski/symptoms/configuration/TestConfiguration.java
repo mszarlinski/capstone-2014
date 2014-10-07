@@ -22,6 +22,11 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 
 import pl.coursera.mszarlinski.symptoms.domain.Patient;
 
+/**
+ * 
+ * @author Maciej
+ *
+ */
 @Configuration
 @Profile("test")
 public class TestConfiguration {

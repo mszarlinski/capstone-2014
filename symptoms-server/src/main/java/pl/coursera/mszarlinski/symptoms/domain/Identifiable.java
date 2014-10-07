@@ -5,6 +5,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
+/**
+ * 
+ * @author Maciej
+ *
+ */
 @MappedSuperclass
 public abstract class Identifiable<T> {
 	@Id

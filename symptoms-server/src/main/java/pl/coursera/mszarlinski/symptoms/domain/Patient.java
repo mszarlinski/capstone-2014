@@ -9,6 +9,11 @@ import javax.persistence.FetchType;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
+/**
+ * 
+ * @author Maciej
+ *
+ */
 @Entity
 public class Patient extends Identifiable<Long> {
 
@@ -16,8 +21,8 @@ public class Patient extends Identifiable<Long> {
 	public String secondName;
 
 	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	public Set<Medication> medications = new HashSet<>();
+	public Set<Medication> medications = new HashSet<Medication>();
 
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true, mappedBy = "patient")
-	public Set<CheckIn> checkIns = new HashSet<>();
+	public Set<CheckIn> checkIns = new HashSet<CheckIn>();
 }

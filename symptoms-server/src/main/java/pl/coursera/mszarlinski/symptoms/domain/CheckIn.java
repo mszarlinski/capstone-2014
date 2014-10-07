@@ -12,6 +12,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+/**
+ * 
+ * @author Maciej
+ *
+ */
 @Entity
 public class CheckIn extends Identifiable<Long> {
 	
@@ -19,7 +24,7 @@ public class CheckIn extends Identifiable<Long> {
 	public Patient patient;
 
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true, mappedBy = "checkIn")
-	public Set<Answer> answers = new HashSet<>();
+	public Set<Answer> answers = new HashSet<Answer>();
 
 	@Temporal(TemporalType.TIMESTAMP)
 	public Date creationDate;

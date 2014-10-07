@@ -3,6 +3,11 @@ package pl.coursera.mszarlinski.symptoms.domain;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
+/**
+ * 
+ * @author Maciej
+ *
+ */
 @Entity
 public class Answer extends Identifiable<Long> {
 
@@ -12,11 +17,5 @@ public class Answer extends Identifiable<Long> {
 	@ManyToOne
 	public Question question;
 
-	private String content;
-	private EAnswerType answerType;
-
-	// @Transient
-	// public Integer getContentAsInteger() {
-	//
-	// }
+	public String content;
 }

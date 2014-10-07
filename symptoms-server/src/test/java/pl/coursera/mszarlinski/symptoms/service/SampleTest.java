@@ -12,14 +12,17 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 
+import pl.coursera.mszarlinski.symptoms.SymptomsContextTest;
 import pl.coursera.mszarlinski.symptoms.configuration.Application;
 import pl.coursera.mszarlinski.symptoms.domain.Patient;
 import pl.coursera.mszarlinski.symptoms.repository.PatientRepository;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ActiveProfiles("test")
-@ContextConfiguration(classes = Application.class, loader = AnnotationConfigContextLoader.class)
-public class SampleTest {
+/**
+ * 
+ * @author Maciej
+ *
+ */
+public class SampleTest extends SymptomsContextTest {
 
 	@Autowired
 	private PatientRepository patientRepository;
@@ -27,10 +30,11 @@ public class SampleTest {
 	@Test
 	public void test() {
 		Patient p = new Patient();
-		p.name = "Maciek";
+		p.name = "Scott";
+		p.secondName = "Tiger";
 		patientRepository.save(p);
 
-		List<Patient> ps = patientRepository.findByName("Maciek");
+		List<Patient> ps = patientRepository.queryByName("ige");
 		Assert.assertFalse(ps.isEmpty());
 	}
 }

@@ -22,6 +22,11 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 
 import pl.coursera.mszarlinski.symptoms.domain.Patient;
 
+/**
+ * 
+ * @author Maciej
+ *
+ */
 @Configuration
 @Profile("local")
 public class LocalConfiguration {
@@ -44,7 +49,7 @@ public class LocalConfiguration {
 		p.put(org.hibernate.cfg.Environment.SHOW_SQL, "true");
 		p.put(org.hibernate.cfg.Environment.FORMAT_SQL, "true");
 
-//		p.put(org.hibernate.cfg.Environment.HBM2DDL_AUTO, "create-drop");
+		// p.put(org.hibernate.cfg.Environment.HBM2DDL_AUTO, "create-drop");
 		factory.setJpaPropertyMap(p);
 
 		return factory;
