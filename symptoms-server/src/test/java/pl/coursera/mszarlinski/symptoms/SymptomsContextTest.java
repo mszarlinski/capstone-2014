@@ -1,6 +1,5 @@
 package pl.coursera.mszarlinski.symptoms;
 
-import org.junit.Ignore;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
@@ -17,8 +16,7 @@ import pl.coursera.mszarlinski.symptoms.configuration.Application;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ActiveProfiles("test")
 @ContextConfiguration(classes = Application.class, loader = AnnotationConfigContextLoader.class)
-@Ignore //ignore empty test set
-public class SymptomsContextTest {
+public abstract class SymptomsContextTest {
 	
 
 }

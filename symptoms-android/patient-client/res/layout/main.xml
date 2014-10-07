@@ -1,16 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TableLayout android:id="@+id/Table"
-        android:layout_width="fill_parent"
-		android:layout_height="fill_parent"
-        android:stretchColumns="0,1,2,3,4"
-        xmlns:android="http://schemas.android.com/apk/res/android">
-<TableRow android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
-<Button android:id="@+id/ButtonRed" android:text="@string/ButtonRed" />
-<Button android:id="@+id/ButtonGreen" android:text="@string/ButtonGreen" />
-<Button android:id="@+id/ButtonBlue" android:text="@string/ButtonBlue" />
-<Button android:id="@+id/ButtonBlack" android:text="@string/ButtonBlack" />
-<Button android:id="@+id/ButtonWhite" android:text="@string/ButtonWhite" />
-</TableRow>
-</TableLayout>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bootstrapbutton="http://schemas.android.com/apk/res-auto"
+    xmlns:fontawesometext="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="pl.coursera.mszarlinski.symptoms.activity.app.MainActivity" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_message"
+            style="@style/header" />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/accountButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/manage_account"
+            bootstrapbutton:bb_icon_left="fa-user"
+            bootstrapbutton:bb_roundedCorners="true"
+            bootstrapbutton:bb_type="primary" />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/settingsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/settings"
+            bootstrapbutton:bb_icon_left="fa-bell-o"
+            bootstrapbutton:bb_roundedCorners="true"
+            bootstrapbutton:bb_type="info" />
+    </LinearLayout>
+
+</ScrollView>

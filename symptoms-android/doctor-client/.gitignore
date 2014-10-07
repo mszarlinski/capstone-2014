@@ -1,6 +1,4 @@
 /target/
-/bin/
-/gen/
-*.settings
-*.classpath
-*.project
+/.apt_generated/
+bin/
+gen/

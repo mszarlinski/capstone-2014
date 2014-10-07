@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bootstrapbutton="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/patientLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp" >
+    </TextView>
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/showCheckInsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        bootstrapbutton:bb_icon_right="fa-calendar-o"
+        bootstrapbutton:bb_roundedCorners="true"
+        bootstrapbutton:bb_type="primary" />
+    
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/selectMedicationsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        bootstrapbutton:bb_icon_right="fa-stethoscope"
+        bootstrapbutton:bb_roundedCorners="true"
+        bootstrapbutton:bb_type="warning" />
+
+</LinearLayout>

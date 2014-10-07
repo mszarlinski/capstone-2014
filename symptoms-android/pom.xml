@@ -1,17 +1,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
 	<artifactId>symptoms-android</artifactId>
 	<packaging>pom</packaging>
 	<name>symptoms-android</name>
 	<description>SYMPTOMS Application Android Parent Project</description>
 
 	<modules>
-<!-- 		<module>patient-client</module> -->
+		<module>patient-client</module>
 		<module>doctor-client</module>
+		<module>symptoms-client-commons</module>
 	</modules>
-	
+
 	<parent>
 		<groupId>pl.coursera.mszarlinski.symptoms</groupId>
 		<artifactId>symptoms-parent</artifactId>
@@ -19,16 +19,17 @@
 	</parent>
 
 	<properties>
-		<android-platform>19</android-platform>
-		<android-maven-plugin-version>3.9.0-rc.1</android-maven-plugin-version>
-		<maven-eclipse-plugin-version>2.9</maven-eclipse-plugin-version>
-		<com.google.android-version>4.1.1.4</com.google.android-version>
+		<android-platform>17</android-platform>
+		<android-maven-plugin-version>3.8.2</android-maven-plugin-version>
+		<com.google.android-version>4.2.2_r2</com.google.android-version> <!-- API level 17 -->
 		<org.springframework.android-version>2.0.0.M1</org.springframework.android-version>
+		<butterknife-version>5.1.2</butterknife-version>
 	</properties>
 
 	<dependencies>
+		<!-- installed with maven-android-sdk-deployer -->
 		<dependency>
-			<groupId>com.google.android</groupId>
+			<groupId>android</groupId>
 			<artifactId>android</artifactId>
 			<version>${com.google.android-version}</version>
 			<scope>provided</scope>
@@ -37,6 +38,12 @@
 			<groupId>org.springframework.android</groupId>
 			<artifactId>spring-android-rest-template</artifactId>
 			<version>${org.springframework.android-version}</version>
+		</dependency>
+		<!-- View injection -->
+		<dependency>
+			<groupId>com.jakewharton</groupId>
+			<artifactId>butterknife</artifactId>
+			<version>${butterknife-version}</version>
 		</dependency>
 	</dependencies>
 </project>

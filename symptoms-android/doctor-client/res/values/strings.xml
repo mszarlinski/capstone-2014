@@ -1,9 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">SYMPTOMS for Doctor</string>
-    <string id="ButtonRed" name="ButtonRed">Red</string>
-	<string id="ButtonBlue" name="ButtonBlue">Blue</string>
-	<string id="ButtonGreen" name="ButtonGreen">Green</string>
-	<string id="ButtongBlack" name="ButtonBlack">Black</string>
-	<string id="ButtonWhite" name="ButtonWhite">White</string>
+    <string name="welcome_message">Welcome to SYMPTOMS app</string>
+    <string name="manage_account">Manage account</string>
+    <string name="my_patients">My patients</string>
+    <string name="you_must_register_first">You must register first</string>
+
+    <!-- MANAGE ACCOUNT -->
+    <string name="name">Name</string>
+    <string name="second_name">Second name</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="registration_invalid">Registration data is invalid</string>
+    <string name="successfully_registered">You have successfully registered!</string>
+
+    <!-- PATIENTS LIST -->
+    <string name="type_patient_name">Type patient name</string>
+
+    <!-- MEDICATIONS LIST -->
+    <string name="select_medications">Select medications</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- CHECK-INS LIST -->
+    <string name="checkin_list">Check-in list</string>
+    <string name="problem_with_eating">Problem with eating</string>
+    <string name="none">No</string>
+    <string name="some">Some</string>
+    <string name="cant_eat">Can\'t eat</string>
+    <string name="pain_intensity">Pain intensity</string>
+    <string name="well_controlled">Well-controlled</string>
+    <string name="moderate">Moderate</string>
+    <string name="severe">Severe</string>
+
+
+
 </resources>

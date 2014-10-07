@@ -13,6 +13,8 @@ import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import pl.coursera.mszarlinski.symptoms.repository.PatientRepository;
+
 /**
  * 
  * @author Maciej
@@ -21,17 +23,17 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @Import({ LocalConfiguration.class, TestConfiguration.class })
 // , CloudConfiguration.class })
-@EnableJpaRepositories(basePackages = "pl.coursera.mszarlinski.symptoms.repository")
-// TODO: automatyczny audyt encji - @EnableJpaAuditing
+@EnableJpaRepositories(basePackageClasses = PatientRepository.class)
 @EnableTransactionManagement
-@ComponentScan(basePackages = "pl.coursera.mszalinski.symptoms")
+@ComponentScan(basePackages = { "pl.coursera.mszarlinski.symptoms.service",
+		"pl.coursera.mszarlinski.symptoms.repository" })
 @EnableCaching
-@PropertySource("/application.properties")
+@PropertySource("classpath:/application.properties")
+// feeds Environment object
 public class Application {
 
 	@Bean
-	public PlatformTransactionManager transactionManager(
-			EntityManagerFactory entityManagerFactory) {
+	public PlatformTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) {
 		return new JpaTransactionManager(entityManagerFactory);
 	}
 

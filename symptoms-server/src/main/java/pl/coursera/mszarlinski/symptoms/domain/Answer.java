@@ -1,7 +1,11 @@
 package pl.coursera.mszarlinski.symptoms.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.ManyToOne;
+
+import pl.coursera.mszarlinski.symptoms.rest.enumerated.EQuestion;
 
 /**
  * 
@@ -11,11 +15,17 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Answer extends Identifiable<Long> {
 
-	@ManyToOne
+	@ManyToOne(optional = false)
 	public CheckIn checkIn;
 
+//	@ManyToOne
+//	public Question question;
+	
+	@Enumerated(EnumType.STRING)
+	public EQuestion question;
+	
 	@ManyToOne
-	public Question question;
+	public Medication medication;
 
 	public String content;
 }

@@ -1,0 +1,14 @@
+Run mvn eclipse:eclipse and import as "Existing Eclipse project".
+As src folders there should be exactly 3: src/main/java, src/test/java and gen.
+
+To deploy artifact using pure Maven - "mvn clean install android:deploy"
+
+To launch server - "mvn clean install tomcat:run"
+
+Known issues:
+
+* Conversion to Dalvik format failed with error 1
+Dx 
+trouble processing "javax/xml/namespace/QName.class":
+
+Remove "XPP" and "Maven dependencies" from "Order and Export" tab.

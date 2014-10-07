@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bootstrapbutton="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res/pl.mszarlinski.coursera.symptoms"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/checkInDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <GridLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:columnCount="2"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_gravity="start"
+                android:text="@string/pain_intensity" />
+
+            <TextView
+                android:id="@+id/painIntensityText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="5dp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_gravity="start"
+                android:text="@string/problem_with_eating" />
+
+            <TextView
+                android:id="@+id/problemWithEatingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="5dp"
+                android:textStyle="italic" />
+        </GridLayout>
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/okStatusIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            app:bb_icon_right="fa-thumbs-o-up"
+            app:bb_type="success" >
+        </com.beardedhen.androidbootstrap.BootstrapButton>
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/moderateStatusIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            app:bb_icon_right="fa-thumbs-o-down"
+            app:bb_type="warning" >
+        </com.beardedhen.androidbootstrap.BootstrapButton>
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/dangerStatusIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            app:bb_icon_right="fa-thumbs-down"
+            app:bb_type="danger" >
+        </com.beardedhen.androidbootstrap.BootstrapButton>
+    </LinearLayout>
+
+</LinearLayout>

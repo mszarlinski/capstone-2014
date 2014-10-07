@@ -8,7 +8,16 @@
 		</layout>
 	</appender>
 	<root>
-		<level value="debug" />
+		<level value="DEBUG" />
 		<appender-ref ref="CONSOLE" />
 	</root>
+	
+<!-- 	<logger name="org.hibernate"> -->
+<!-- 	    <level value="WARN"/> -->
+<!-- 	    <appender-ref ref="CONSOLE" /> -->
+<!-- 	</logger> -->
+<!-- 	<logger name="org.hibernate.type"> -->
+<!-- 	    <level value="TRACE"/> -->
+<!-- 	    <appender-ref ref="CONSOLE" /> -->
+<!-- 	</logger> -->
 </log4j:configuration>

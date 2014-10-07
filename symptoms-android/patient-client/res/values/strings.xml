@@ -1,9 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">HelloFlashlight</string>
-    <string id="ButtonRed" name="ButtonRed">Red</string>
-	<string id="ButtonBlue" name="ButtonBlue">Blue</string>
-	<string id="ButtonGreen" name="ButtonGreen">Green</string>
-	<string id="ButtongBlack" name="ButtonBlack">Black</string>
-	<string id="ButtonWhite" name="ButtonWhite">White</string>
+
+    <string name="app_name">SYMPTOMS for Patient</string>
+    <string name="welcome_message">Welcome to SYMPTOMS app</string>
+    <string name="manage_account">Manage account</string>
+    <string name="settings">Alarm settings</string>
+    <string name="you_must_register_first">You must register first</string>
+    
+    <!-- CHECK-IN WIZARD -->
+    <string name="next">next</string>
+    <string name="mouth_pain_question">How bad is your mouth pain?</string>
+    <string name="well_controlled">Well-controlled</string>
+	<string name="moderate">Moderate</string>
+	<string name="severe">Severe</string>
+	
+	<string name="stop_eating_question">Does your pain stop you from eating or drinking?</string>
+	<string name="none">No</string>
+	<string name="some">Some</string>
+	<string name="cant_eat">I can\'t eat</string>
+	
+	<string name="did_you_take">Did you take&#8230;</string>
+	<string name="date_not_set">You must pick date for each selected medication</string>
+	
+	<string name="take_throat_photo">Take photo of your throat (optional)</string>
+	<string name="launch_camera">Launch camera</string>
+	<string name="delete_photo">Delete photo</string>
+	
+	<string name="complete_check_in_question">Send Your check-in to Doctor</string>
+	<string name="complete_check_in">Complete</string>
+	<string name="cancel_check_in">Cancel</string>
+	
+	<string name="select_one_option">Please select one option</string>
+	<string name="sending_check_in_data">Sending check in data&#8230;</string>
+	
+	<string name="add_alarm">Add alarm</string>
+	<string name="save_alarms">Save</string>
+	<string name="min_alarms_number_warning">You must register at least %d check-ins</string>
+	<string name="alarms_saved">Alarms have been saved</string>
+	
+	<!-- MANAGE ACCOUNT -->
+	<string name="name">Name</string>
+	<string name="second_name">Second name</string>
+	<string name="date_of_birth">Data of birth</string>
+	<string name="medical_record_no">Medical record</string>	
+	<string name="password">Password</string>
+	<string name="select_doctors">Select doctors</string>
+	<string name="register">Register</string>
+	<string name="connect_to_account">Connect to existing account</string>
+	<string name="registration_invalid">Registration data is invalid</string>
+	<string name="successfully_registered">You have successfully registered!</string>
+	<!-- SELECT DOCTOR -->
+	<string name="type_doctor_name">Type doctor name</string>
+	<string name="add_doctor">Add doctor</string>
+	<string name="done">Done</string>
+
+
+	
 </resources>
